@@ -1,0 +1,8 @@
+<h1 class="text-center">
+      Edit Your Listing
+</h1>
+    <%= form_for [@user, @listing] do |f| %>
+        <%= render partial: "form", locals: {f: f} %>
+      <% end %>
+
+<%= link_to "Delete Listing", user_listing_path(@user, @listing), method: :delete, data: {confirm: "Delete it?"}, class: "btn btn-danger" %>
