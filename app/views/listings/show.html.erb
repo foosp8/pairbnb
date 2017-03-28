@@ -1,0 +1,14 @@
+<h1 class="text-center">
+      Particular of the listing
+</h1>
+
+<p>Location: <%= @listing.location %></p>
+<p>Description: <%= @listing.description %></p>
+<p>No of rooms: <%= @listing.no_rooms %></p>
+<p>No of beds: <%= @listing.no_beds %></p>
+<p>date created: <%= @listing.created_at %></p>
+<p>date updated: <%= @listing.updated_at %></p>
+
+<%= link_to "All Listing", user_listings_path(current_user) %>
+
+<%= link_to "Edit Listing", edit_user_listing_path(current_user) %>

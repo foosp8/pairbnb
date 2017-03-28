@@ -1,0 +1,7 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+<%= link_to "Sign in with Facebook", "/auth/facebook" %><br>
+<% if signed_in? %>
+  <%= link_to "All Listing", user_listings_path(current_user) %>
+  <%= link_to "New Listing", new_user_listing_path(current_user) %>
+<% end %>
