@@ -12,6 +12,7 @@ class ListingsController < ApplicationController
 
   #C-create
   def create
+    # byebug
     @listing = current_user.listings.new(listing_params)
     if @listing.save
       redirect_to user_listings_path(current_user)
@@ -39,7 +40,7 @@ class ListingsController < ApplicationController
     @listing =Listing.find(params[:id])
     if @listing.update(listing_params)
       flash[:success] = "successfully updated listing"
-      redirect_to [User.find(params[:user_id]),@listing]
+      redirect_to user_listing_path(current_user, @listing)
     else
       flash[:danger]= "error updating listing"
       render :edit
@@ -55,7 +56,7 @@ class ListingsController < ApplicationController
   private
     def listing_params
     # params.require(:listing).permit(:title, :description, :max_guests, :price)
-    params.require(:listing).permit(:location, :description, :no_rooms, :no_beds)
+    params.require(:listing).permit(:location, :description, :no_rooms, :no_beds, {avatars:[]})
    end
 
 

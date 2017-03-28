@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/carrierwaveuploader/carrierwave.git
+  revision: 75e95b54ddbb3022cc7f9dd083a273dcd79be564
+  specs:
+    carrierwave (1.0.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -87,6 +96,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_magick (4.7.0)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
@@ -166,9 +176,9 @@ GEM
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
-    tzinfo (1.2.2)
+    tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    uglifier (3.1.9)
+    uglifier (3.1.10)
       execjs (>= 0.3.0, < 3)
     web-console (3.4.0)
       actionview (>= 5.0)
@@ -184,12 +194,14 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  carrierwave!
   clearance
   coffee-rails (~> 4.2)
   figaro
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  mini_magick
   omniauth
   omniauth-facebook
   pg (~> 0.18)

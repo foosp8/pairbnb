@@ -2,6 +2,8 @@
       Particular of the listing
 </h1>
 
+<%= image_tag (@listing.avatars[0].url) if @listing.avatars.count > 0 %>
+
 <p>Location: <%= @listing.location %></p>
 <p>Description: <%= @listing.description %></p>
 <p>No of rooms: <%= @listing.no_rooms %></p>
